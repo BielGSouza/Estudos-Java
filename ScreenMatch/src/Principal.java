@@ -1,14 +1,19 @@
+import br.gabriel.aluno.Epsodios;
 import br.gabriel.aluno.Filme;
 import br.gabriel.aluno.Serie;
 import calculadora.Calculadora;
+import calculadora.Recomendacao;
 
 public class Principal {
     static void main() {
         Filme favorito = new Filme();
-        favorito.setNome("“The Matrix”");
+        favorito.setNome("The Matrix");
         favorito.setAnoDeLancamento(1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
+        favorito.avalia(7);
+        favorito.avalia(8);
+
 
         Filme outro = new Filme();
         outro.setNome("Vingadore Ultimato");
@@ -29,5 +34,16 @@ public class Principal {
         calculadora.inclui(serie);
 
         System.out.println("Tempo total: " +calculadora.getTempoTotal());
+
+        Recomendacao filtro = new Recomendacao();
+        filtro.filtrar(favorito);
+
+        Epsodios epsodio = new Epsodios();
+        epsodio.setNumero(1);
+        epsodio.setSerie(serie);
+        epsodio.setTotalVisualizacaoes(300);
+        filtro.filtrar(epsodio);
+
+        Filme filmeDoGabriel = new Filme();
     }
 }
