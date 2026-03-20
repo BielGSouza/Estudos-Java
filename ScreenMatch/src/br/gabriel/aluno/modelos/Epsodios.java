@@ -1,6 +1,6 @@
-package br.gabriel.aluno;
+package br.gabriel.aluno.modelos;
 
-import calculadora.Classificavel;
+import br.gabriel.aluno.calculadora.Classificavel;
 
 public class Epsodios implements Classificavel {
     private int numero;

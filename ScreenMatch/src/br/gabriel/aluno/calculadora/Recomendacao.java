@@ -1,4 +1,4 @@
-package calculadora;
+package br.gabriel.aluno.calculadora;
 
 public class Recomendacao {
     private String recomendacao;

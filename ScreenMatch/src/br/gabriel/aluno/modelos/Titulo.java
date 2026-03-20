@@ -1,12 +1,17 @@
-package br.gabriel.aluno;
+package br.gabriel.aluno.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private boolean incluindoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
+
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
 
     public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
@@ -63,5 +68,10 @@ public class Titulo {
     }
 
     public void setIncluidoNoPlano(boolean b) {
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }

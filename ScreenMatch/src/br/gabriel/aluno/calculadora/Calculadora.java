@@ -1,6 +1,6 @@
-package calculadora;
+package br.gabriel.aluno.calculadora;
 
-import br.gabriel.aluno.Titulo;
+import br.gabriel.aluno.modelos.Titulo;
 
 public class Calculadora {
     private int tempoTotal;
