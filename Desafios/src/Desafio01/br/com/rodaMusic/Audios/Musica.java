@@ -1,6 +1,6 @@
-package Desafio.br.com.rodaMusic.Audios;
+package Desafio01.br.com.rodaMusic.Audios;
 
-import Desafio.br.com.rodaMusic.Implementos.Avaliacao;
+import Desafio01.br.com.rodaMusic.Implementos.Avaliacao;
 
 public class Musica extends Audio implements Avaliacao {
     @Override

@@ -1,8 +1,8 @@
-package Desafio;
+package Desafio01;
 
-import Desafio.br.com.rodaMusic.Audios.Audio;
-import Desafio.br.com.rodaMusic.Audios.Musica;
-import Desafio.br.com.rodaMusic.Audios.Podcast;
+import Desafio01.br.com.rodaMusic.Audios.Audio;
+import Desafio01.br.com.rodaMusic.Audios.Musica;
+import Desafio01.br.com.rodaMusic.Audios.Podcast;
 
 public class Main {
     //Desafio de fazer um sistema simples de um APP de musica. algo simples mesmo. Nome RodaMusic.

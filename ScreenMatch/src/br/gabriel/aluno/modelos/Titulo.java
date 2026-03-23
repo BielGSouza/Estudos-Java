@@ -1,5 +1,8 @@
 package br.gabriel.aluno.modelos;
 
+import br.gabriel.aluno.execao.ErroDeConversaodeAnoExcepition;
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
@@ -11,6 +14,16 @@ public class Titulo implements Comparable<Titulo> {
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloomdb) {
+        this.nome = meuTituloomdb.title();
+
+        if (meuTituloomdb.year().length() > 4) {
+            throw new ErroDeConversaodeAnoExcepition("Não consegui converter o ano");
+        }
+        this.anoDeLancamento = Integer.valueOf(meuTituloomdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloomdb.runtime().substring(0,2));
     }
 
     public int getTotalDeAvaliacoes() {
@@ -73,5 +86,12 @@ public class Titulo implements Comparable<Titulo> {
     @Override
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
+    }
+
+    @Override
+    public String toString() {
+        return "(nome: " + nome +
+                ", anoDeLancamento: " + anoDeLancamento +
+                ',' + " Duração: " + duracaoEmMinutos + ")";
     }
 }

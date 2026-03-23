@@ -1,4 +1,4 @@
-package Desafio.br.com.rodaMusic.Audios;
+package Desafio01.br.com.rodaMusic.Audios;
 
 public class Audio {
     private String nomeAudio;
