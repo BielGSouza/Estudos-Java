@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136770 -->
+<html lang="pt-BR" data-product="alura" style="scroll-behavior: smooth;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	
+		
+
+
+
+
+
+
+    
+        
+            <!-- Google Tag Manager -->
+            <script async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/clarity.js.download"></script><script type="text/javascript" async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/j5yix797ro"></script><script async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/OiIKV8DdRsC6DWlZuu25.js.download"></script><script type="text/javascript" async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/23465.js.download"></script><script type="text/javascript" async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/js"></script><script async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/aqukryqvi.js.download"></script><script>
+                ;(function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s);
+                    j.async = true;
+                    j.src = "https://stape.alura.com.br/aqukryqvi.js?" + i;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayerAlura', '9e=ABJMPiYmWD89OiYuPjlTB1REX0hUB0gVCAIQNRMSEAMoGgQLE00RH1QXHQwAClsSBhtfGwA%3D');
+            </script>
+            <!-- End Google Tag Manager -->
+        
+        
+    
+
+
+    <script>
+        let dataLayerAlura = window.dataLayerAlura || [];
+        dataLayerAlura.push({
+            'event': 'virtual_page_view',
+            'page_category': 'Aula',
+            
+            
+            
+                
+                    
+                    
+                        
+                        'user_id': '8726814',
+                        'plan': 'Pro',
+                        'type': 'B2B',
+                        'company_id':'12068',
+                        'first_purchase_date': '2026-02-01',
+                        'last_purchase_date': '2026-02-01',
+                        'expiration_date': '2026-07-31',
+                        'email': '81afb8026629aef5c083e3d4846b144a6f8316eff50603cb71ba74649d33ac36'
+                    
+                
+            
+        });
+    </script>
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+	<title>Java: trabalhando com lambdas, streams e Spring Framework: Aula 3 - Atividade 11 Para saber mais: trabalhando com datas | Alura - Cursos online de tecnologia</title>
+
+	<link rel="shortcut icon" href="https://cursos.alura.com.br/assets/images/alura/favicon.ico">
+
+	<link href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/video-js.w.062f9578bd.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/silvermine-videojs-quality-selector.min.w.d.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/prettify.w.e207c5226b.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/github.w.7eada5b91a.css">
+
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/base.w.23243363e5.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/formattedText.w.e2ea9ed68a.css">
+
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/container.w.7c99bbbd3d.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/classPage.w.abbbfc62a5.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/menuSettings.w.0af399eaf3.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/taskProgress.w.a3b84abb56.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/taskMessageInfo.w.2d2013fac7.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/alternativeList.w.7e47bc21c4.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/taskFeedback.w.3cdbd492a1.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/markdown.w.c62b155f29.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/finishSection.w.4d75f2c830.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/phrase.w.31d2b7f9a7.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/hqexplanation.w.9a72c7cdc9.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/documentViewer.w.1f6f932761.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/openquestion.w.8ab89d143a.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/textcontent.w.cfd11f41b0.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/video.w.1bd3ca62f4.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/singlechoice.w.db36727b25.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/music.w.4adcf051a5.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/multiplechoice.w.dd63a2ca2e.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/videodialog.w.33bef1fdbf.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/fillintheblank.w.6edd30bc91.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/speakingpractice.w.f45ff2b57d.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/pronunciationpractice.w.da7d38d7f2.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/repetition.w.070c3a7ea6.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/genericVideo.w.21c22ab6a7.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/projectSubmit.w.735fdc76d1.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/sortBlocks.w.63b41f238c.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/maze.w.20ce661e91.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/extraContentTask.w.645adb31ec.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/taskContent.w.2b77ace0d9.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/taskButtons.w.ef87a55e16.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/dragAndDrop.w.3ff1598abd.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/startlabProject.w.5e70fb9138.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/alert.w.94f2c7586d.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/markdownEditor.w.73fd00c430.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/audioPlayer.w.3d600af921.css">
+	
+    
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/processingVideoTasksAlert.w.a00281e876.css">
+    <link rel="stylesheet" type="text/css" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/clipper.w.27cc7a02fe.css">
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/back-to-top.w.6bb865cb1a.css">
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/videoShortcutsModal.w.0f890e5a27.css">
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/modal.w.527856d2a0.css">
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/modalCoursePreviewMode.w.169cec9b9c.css">
+    
+        <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/monokai-theme-hljs.w.cd30ec65cc.css">
+        <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/chatbot.w.614bc28ea6.css">
+    
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/checkpointModal.w.facce74664.css">
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/modalScratchSelectTeam.w.079dac0679.css">
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/successMessage.w.510dfd97c0.css">
+
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/dark-mode.w.8e83ff4ccc.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/taskFeedbackAnswer.w.656746248f.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/theater-mode.w.eb4e9f2475.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/autoplay-videojs.w.8d181042dc.css">
+    <link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/linkSubmit.w.57d9f716af.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/search.w.9c4339188b.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/headerNews.w.d37ac86551.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/header.w.358a62bf77.css">
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/pointsGraphic.w.96b3a86679.css">
+
+	
+		<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/engagementSearch.w.01489283b0.css">
+		<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/engagementMenu.w.73cba2f1cb.css">
+		<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/bannerTitleEngagement.w.5098a50166.css">
+	
+
+	
+
+	
+	<style type="text/css">
+		.task:before, .video-js .vjs-play-progress {
+			background-color: #2A7AE4;
+		}
+
+
+	</style>
+
+	
+		
+	
+
+	<!-- Remove cookie banner from hubspot -->
+	<style>
+		div#hs-eu-cookie-confirmation {
+			display: none;
+		}
+	</style>
+
+	<script async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/hotjar-1638253.js.download"></script><script async="" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/modules.6a0f3932cb1341a35c18.js.download" charset="utf-8"></script><script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/browser-perf.8417c6bba72228fa2e29.js.download"></script></head>
+
+
+
+
+
+<body class="darkmode " cz-shortcut-listen="true">
+
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+    <header class="menu">
+        
+
+        
+
+        
+
+
+
+<section id="headerBusca" class="headerBusca">
+    <div class="container">
+        
+            
+            <a href="https://cursos.alura.com.br/search" aria-label="busca" class="headerBusca-icon headerBusca-icon-mobile --mobile-only" role="button" aria-expanded="false" aria-controls="headerBusca-form">
+                <svg class="headerBusca-icon-svg"><use xlink:href="/assets/images/header/icon-busca.svg#busca"></use></svg>
+            </a>
+            
+                <form action="https://cursos.alura.com.br/chatbot/search" id="luriSearch">
+                    <input type="hidden" name="query" id="headerBusca-campoBusca-chatbot">
+                </form>
+            
+            <form action="https://cursos.alura.com.br/search" id="headerBusca-form" class="headerBusca-form headerBusca-form--retratil">
+                <div class="search-input-wrapper search-move-on-desktop" tabindex="0" autofocus="">
+                    <div class="search-input-with-icon">
+                        
+                        <input type="search" class="skipKeyPress headerBusca-form-input" id="headerBusca-campoBusca" name="query" autocomplete="off" placeholder="O que você quer aprender?" aria-label="Barra de pesquisa para buscar o termo desejado ">
+                        <div id="header-suggestions-dropdown" class="suggestions-dropdown"></div>
+                        <div class="search-buttons">
+                            <div class="search-button__border">
+                                
+                                <button class="headerBusca-submit search-and-send-data" aria-label="Realizar a pesquisa do termo digitado " type="submit">
+                                    Pesquisar
+                                </button>
+                            </div>
+                            
+                                <div class="search-button__border border-submit-chatbot">
+                                    
+                                    <button class="headerBusca-submit headerBusca-submit-chatbot search-and-send-data" aria-label="Realizar a pesquisa do termo digitado com o chatbot" type="submit" form="luriSearch">
+                                        <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/search-chatbot-icon.svg" alt="Ícone da Luri">
+                                        Pesquisar com IA
+                                    </button>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        
+    </div>
+</section>
+        <div class="menu__topbar --space-container --mobile-only">
+            <button class="menu__toggle-btn"></button>
+        </div>
+
+        <div class="menu__drawer">
+            <div class="menu__logo --desktop-only header-logo--company">
+                <a href="https://cursos.alura.com.br/dashboard">
+                    <img class="header-logo header-logo-alura logo-alura" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/logo-alura.svg" alt="alura">
+                </a>
+                
+
+
+
+
+
+
+    
+    
+        <span class="company-logo--vertical-separator"></span>
+    
+    <div class="company-logo__wrapper">
+        <div class="company-logo">
+            <img class="company-logo__img" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/f0ce55ee-1962-44ae-ab85-5a2bc8e46a66.png" alt="Logo da empresa - FIAP - Graduação">
+        </div>
+    </div>
+    
+
+
+            </div>
+
+            <div class="menu__profile --space-container">
+                <div class="menu__news">
+                    <div class="profile__avatar-name profile__alert ">
+                        <img class="profile__avatar" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/1030a5eb-1c07-4372-b5f0-f0d4e2876f40.jpeg" alt="Foto de Gabriel de Souza Almeida">
+                        <a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136770#" class="profile__edit-avatar"></a>
+                        <p class="profile__info-name --mobile-only">Gabriel</p>
+                        <div class="navigation__item --desktop-only">
+                            <button class="navigation__item-name user-name" aria-controls="profile-menu-desktop" aria-expanded="false">Gabriel</button>
+                            <ul id="profile-menu-desktop" class="navigation__sublist">
+                                
+
+
+
+
+
+
+                                    <li class="navigation__subitem subitem">
+                                        
+                                            <div class="profile__information">
+                                                <div class="profile__information-avatar">
+                                                    <img class="profile__avatar" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/1030a5eb-1c07-4372-b5f0-f0d4e2876f40.jpeg" alt="Foto de Gabriel de Souza Almeida">
+                                                </div>
+                                                <div class="profile__information-score">
+                                                    <span class="menu__score">
+                                                        <h4 class="profile__my-score">Minha pontuação</h4>
+                                                        
+
+
+
+
+
+
+<a href="https://cursos.alura.com.br/points" class="points-link header-profile-pontos" data-username="gabrieldesouzaal007" aria-label="seu total de pontos é 26.1k">
+
+    <div class="levelMenu-header-user-points-xp" aria-hidden="true">
+        <span class="levelMenu-header-user-points-xp-points bootcamp-text-color" data-username="gabrieldesouzaal007">26.1k</span><span class="levelMenu-header-user-points-xp-name">xp</span>
+    </div>
+
+    
+
+
+
+
+
+
+<div class="pointsGrid pointsGrid--small" aria-label="total de pontos por dia">
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 25/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 26/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 27/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 28/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 01/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 02/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 03/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 04/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 05/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--medium-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>1700 pontos</strong>
+					
+					
+				
+				em 06/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>500 pontos</strong>
+					
+					
+				
+				em 07/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 08/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--high-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>2900 pontos</strong>
+					
+					
+				
+				em 09/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>300 pontos</strong>
+					
+					
+				
+				em 10/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>800 pontos</strong>
+					
+					
+				
+				em 11/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>700 pontos</strong>
+					
+					
+				
+				em 12/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>300 pontos</strong>
+					
+					
+				
+				em 13/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 14/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 15/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>600 pontos</strong>
+					
+					
+				
+				em 16/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>400 pontos</strong>
+					
+					
+				
+				em 17/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>300 pontos</strong>
+					
+					
+				
+				em 18/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>700 pontos</strong>
+					
+					
+				
+				em 19/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>700 pontos</strong>
+					
+					
+				
+				em 20/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 21/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 22/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>900 pontos</strong>
+					
+					
+				
+				em 23/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--high-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>10200 pontos</strong>
+					
+					
+				
+				em 24/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>500 pontos</strong>
+					
+					
+				
+				em 25/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>500 pontos</strong>
+					
+					
+				
+				em 26/03/2026
+			</span>
+		</div>
+	
+</div>
+
+</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        
+                                    </li>
+                                
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/user/gabrieldesouzaal007" class="subitem__link">
+        <div class="subitem__icon --mine"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Perfil &amp; Certificados</h4>
+            <p class="subitem__description">Gerencie seu perfil e acompanhe sua evolução</p>
+        </div>
+    </a>
+</li>
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/my_profile" class="subitem__link">
+        <div class="subitem__icon --edit"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Editar meu perfil</h4>
+        </div>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/user/payments" class="subitem__link">
+        <div class="subitem__icon --purchases"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Minha matrícula</h4>
+            <p class="subitem__description">Nota fiscal e detalhes do seu plano</p>
+        </div>
+    </a>
+</li>
+
+    
+    
+
+
+
+    <li class="navigation__subitem subitem">
+        <a href="https://cursos.alura.com.br/company-sso-client/12068/proceed" target="_blank" class="subitem__link">
+            <div class="subitem__icon --sso"></div>
+            <div class="subitem__information">
+                <h4 class="subitem__name">Acessar Alura Língua</h4>
+            </div>
+        </a>
+    </li>
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/signout" class="subitem__link">
+        <div class="subitem__icon --logout"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Sair</h4>
+        </div>
+    </a>
+</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                    
+
+
+
+
+
+
+
+<button aria-label="novidades" class="header-news-button notification-not-seen" aria-controls="headerNews" aria-expanded="false"></button>
+<div id="headerNews" class="header-news header-nav bootcamp-header-dark-theme" aria-hidden="true" tabindex="-1" data-exists-notification="true">
+    
+
+    
+
+        
+
+            <span class="header-news-text bootcamp-text-color">Novidades</span>
+            <ul class="header-news-list">
+
+                
+
+                    <li class="news__item header-news-item--highlighted">
+
+                        <a class="header-news-item-link news__link" href="https://cursos.alura.com.br/extra/devsemfronteiras/phd-e-pesquisador-em-biodiversidade-e-protecao-ambiental-em-barcelona-espanha-carreira-sem-fronteiras-236--a10013?utm_source=gnarus&amp;utm_medium=timeline" target="" tabindex="-1">
+                            <img class="news__icon" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/step-dev-sem-fronteiras.svg" alt="Ícone de PhD e Pesquisador em Biodiversidade e Proteção Ambiental em Barcelona, Espanha - Carreira Sem Fronteiras #236 ">
+                            <div class="news__information">
+                                <span class="news__kind news__kind-course">Podcast</span>
+                                <h4 class="news__name bootcamp-text-color-gray">PhD e Pesquisador em Biodiversidade e Proteção Ambiental em Barcelona, Espanha - Carreira Sem Fronteiras #236 </h4>
+                                <span class="news__publishedDate bootcamp-text-color-gray">15 horas atrás</span>
+                            </div>
+                        </a>
+                    </li>
+
+                
+
+                    <li class="news__item header-news-item--highlighted">
+
+                        <a class="header-news-item-link news__link" href="https://www.alura.com.br/artigos/css-border-com-agente?utm_source=gnarus&amp;utm_medium=timeline" target="_blank" tabindex="-1">
+                            <img class="news__icon" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/step-post-alura.svg" alt="Ícone de CSS border: o que você realmente precisa saber antes de pedir para o agente fazer ">
+                            <div class="news__information">
+                                <span class="news__kind ">Artigo</span>
+                                <h4 class="news__name bootcamp-text-color-gray">CSS&nbsp;border: o que você realmente precisa saber antes de pedir para&nbsp;o&nbsp;agente&nbsp;fazer&nbsp;</h4>
+                                <span class="news__publishedDate bootcamp-text-color-gray">1 dia atrás</span>
+                            </div>
+                        </a>
+                    </li>
+
+                
+
+                    <li class="news__item header-news-item--highlighted">
+
+                        <a class="header-news-item-link news__link" href="https://cursos.alura.com.br/course/observabilidade-e-slo-construindo-o-monitoramento-base?utm_source=gnarus&amp;utm_medium=timeline" target="" tabindex="-1">
+                            <img class="news__icon" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/observabilidade-e-slo-construindo-o-monitor.svg" alt="Ícone de Observabilidade e métricas: instrumentação, dashboards e SLOs no Kubernetes">
+                            <div class="news__information">
+                                <span class="news__kind news__kind-course">Curso</span>
+                                <h4 class="news__name bootcamp-text-color-gray">Observabilidade e métricas: instrumentação, dashboards e SLOs no Kubernetes</h4>
+                                <span class="news__publishedDate bootcamp-text-color-gray">1 dia atrás</span>
+                            </div>
+                        </a>
+                    </li>
+
+                
+
+                    <li class="news__item header-news-item--highlighted">
+
+                        <a class="header-news-item-link news__link" href="https://cursos.alura.com.br/course/estrutura-de-time-de-engenharia-de-plataforma?utm_source=gnarus&amp;utm_medium=timeline" target="" tabindex="-1">
+                            <img class="news__icon" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/estrutura-de-time-de-engenharia-de-platafor.svg" alt="Ícone de Platform Engineering: estruturar times e demonstrar valor da plataforma">
+                            <div class="news__information">
+                                <span class="news__kind news__kind-course">Curso</span>
+                                <h4 class="news__name bootcamp-text-color-gray">Platform Engineering: estruturar times e demonstrar valor da plataforma</h4>
+                                <span class="news__publishedDate bootcamp-text-color-gray">1 dia atrás</span>
+                            </div>
+                        </a>
+                    </li>
+
+                
+
+                    <li class="news__item header-news-item--highlighted">
+
+                        <a class="header-news-item-link news__link" href="https://cursos.alura.com.br/extra/iasobcontrole/236-o-significado-de-inteligencia-na-era-dos-llms-com-adrian-valentim-a10012?utm_source=gnarus&amp;utm_medium=timeline" target="" tabindex="-1">
+                            <img class="news__icon" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/step-iasobcontrole.svg" alt="Ícone de 236: O significado de inteligência na era dos LLMs, com Adrian Valentim">
+                            <div class="news__information">
+                                <span class="news__kind news__kind-course">Podcast</span>
+                                <h4 class="news__name bootcamp-text-color-gray">236: O significado de inteligência na era dos LLMs, com Adrian Valentim</h4>
+                                <span class="news__publishedDate bootcamp-text-color-gray">2 dias atrás</span>
+                            </div>
+                        </a>
+                    </li>
+
+                
+            </ul>
+            <a class="header-news-text news__more" href="https://cursos.alura.com.br/explore" tabindex="-1">Ver todas</a>
+        
+
+        
+
+    
+
+</div>
+                
+                
+                    <span class="menu__score --mobile-only">
+                    <h4 class="profile__my-score">Minha pontuação</h4>
+                    
+
+
+
+
+
+
+<a href="https://cursos.alura.com.br/points" class="points-link header-profile-pontos" data-username="gabrieldesouzaal007" aria-label="seu total de pontos é 26.1k">
+
+    <div class="levelMenu-header-user-points-xp" aria-hidden="true">
+        <span class="levelMenu-header-user-points-xp-points bootcamp-text-color" data-username="gabrieldesouzaal007">26.1k</span><span class="levelMenu-header-user-points-xp-name">xp</span>
+    </div>
+
+    
+
+
+
+
+
+
+<div class="pointsGrid pointsGrid--small" aria-label="total de pontos por dia">
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 25/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 26/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 27/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 28/02/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 01/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 02/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 03/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 04/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 05/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--medium-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>1700 pontos</strong>
+					
+					
+				
+				em 06/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>500 pontos</strong>
+					
+					
+				
+				em 07/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 08/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--high-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>2900 pontos</strong>
+					
+					
+				
+				em 09/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>300 pontos</strong>
+					
+					
+				
+				em 10/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>800 pontos</strong>
+					
+					
+				
+				em 11/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>700 pontos</strong>
+					
+					
+				
+				em 12/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>300 pontos</strong>
+					
+					
+				
+				em 13/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 14/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 15/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>600 pontos</strong>
+					
+					
+				
+				em 16/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>400 pontos</strong>
+					
+					
+				
+				em 17/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>300 pontos</strong>
+					
+					
+				
+				em 18/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>700 pontos</strong>
+					
+					
+				
+				em 19/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>700 pontos</strong>
+					
+					
+				
+				em 20/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 21/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--no-score" aria-hidden="true">
+			<span class="pointsGrid-cell-details">
+				
+					
+					
+						não ganhou pontos
+					
+				
+				em 22/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>900 pontos</strong>
+					
+					
+				
+				em 23/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--high-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>10200 pontos</strong>
+					
+					
+				
+				em 24/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>500 pontos</strong>
+					
+					
+				
+				em 25/03/2026
+			</span>
+		</div>
+	
+		<div class="pointsGrid-cell pointsGrid-cell--low-score">
+			<span class="pointsGrid-cell-details">
+				
+					
+						ganhou <strong>500 pontos</strong>
+					
+					
+				
+				em 26/03/2026
+			</span>
+		</div>
+	
+</div>
+
+</a>
+                
+            </span>
+            </div>
+
+            <div class="menu__navigation">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+
+                        
+                            <li class="navigation__item --desktop-only">
+                                <a href="https://cursos.alura.com.br/dashboard" class="navigation__item-dashboard">Dashboard</a>
+                            </li>
+                        
+                        <li class="navigation__item --mobile-only">
+                            <a href="https://cursos.alura.com.br/dashboard" class="navigation__item-dashboard">Home</a>
+                        </li>
+
+                        
+                            <li class="navigation__item --mobile-only menu__drawer-item--hide">
+                                <a href="https://cursos.alura.com.br/dashboard/career" class="navigation__item-dashboard">Carreira</a>
+                            </li>
+                        
+
+                        <li class="navigation__item">
+                            
+                                <a href="https://cursos.alura.com.br/catalog" class="navigation__item-name explore ">Explorar Catálogo</a>
+                            
+                        </li>
+
+                        <li class="navigation__item --mobile-only">
+                            <a href="https://cursos.alura.com.br/history" class="navigation__item-dashboard">Meus Cursos e Certificados</a>
+                        </li>
+
+                        
+                            <li class="navigation__item --mobile-only">
+                                <a href="https://cursos.alura.com.br/learning-guide/engagement" class="navigation__item-dashboard">Minhas Trilhas</a>
+                            </li>
+                        
+                        
+                        
+
+                        
+
+                        <li class="navigation__item --mobile-only menu__drawer-item--hide">
+                            <button class="navigation__item-name" aria-controls="community-menu" aria-expanded="false">
+                                Comunidade</button>
+                            <ul id="community-menu" class="navigation__sublist">
+                                
+
+
+
+
+
+
+
+
+
+
+
+    <li class="navigation__subitem subitem --mobile-only">
+        <a href="https://discord.com/oauth2/authorize?client_id=1278070632013238334&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fcursos.alura.com.br%2Fdiscord%2Fcallback&amp;scope=email+identify+guilds.join" target="_blank" class="subitem__link">
+            <div class="subitem__icon --discord"></div>
+            <div class="subitem__information">
+                <h4 class="subitem__name">Discord</h4>
+                <p class="subitem__description">Estude com outras pessoas na nossa comunidade no Discord</p>
+            </div>
+        </a>
+    </li>
+
+    <li class="navigation__subitem community_subitem --desktop-only">
+        
+
+
+
+
+
+<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/tooltip.w.0e8539da83.css">
+
+
+    
+
+
+    
+
+
+<span class="tooltip">
+    <span class="tooltip-text">
+        Estude com outras pessoas na nossa comunidade no Discord
+        
+    </span>
+
+    
+
+    
+            <a href="https://discord.com/oauth2/authorize?client_id=1278070632013238334&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fcursos.alura.com.br%2Fdiscord%2Fcallback&amp;scope=email+identify+guilds.join" target="_blank" class="community_subitem__link">
+                <div class="community_subitem__information">
+                    <div class="community_subitem__icon --discord"></div>
+                    <h4 class="list__item-text">Discord</h4>
+                </div>
+            </a>
+        
+</span>
+    </li>
+
+
+
+
+
+    <li class="navigation__subitem subitem --mobile-only">
+        <a href="https://cursos.alura.com.br/forum" class="subitem__link">
+        <div class="subitem__icon --forum"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Fórum</h4>
+            <p class="subitem__description">Interaja, converse e tire dúvidas no nosso fórum</p>
+        </div>
+        </a>
+    </li>
+
+    <li class="navigation__subitem community_subitem --desktop-only">
+        <a href="https://cursos.alura.com.br/forum" class="community_subitem__link">
+            <div class="community_subitem__information">
+                <div class="community_subitem__icon --forum"></div>
+                <h4 class="list__item-text">Fórum</h4>
+            </div>
+        </a>
+    </li>
+
+    <li class="navigation__subitem subitem --mobile-only">
+        <a href="https://cursos.alura.com.br/forum/participacao" class="subitem__link">
+            <div class="subitem__icon --forum-mine"></div>
+            <div class="subitem__information">
+                <h4 class="subitem__name">Minhas interações</h4>
+                <p class="subitem__description">Tópicos que participou no Fórum</p>
+            </div>
+        </a>
+    </li>
+
+    <li class="navigation__subitem community_subitem --desktop-only">
+        
+
+
+
+
+
+<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/tooltip.w.0e8539da83.css">
+
+
+    
+
+
+    
+
+
+<span class="tooltip">
+    <span class="tooltip-text">
+        Tópicos que participou no Fórum
+        
+    </span>
+
+    
+
+    
+            <a href="https://cursos.alura.com.br/forum/participacao" class="community_subitem__link">
+                <div class="community_subitem__information">
+                    <div class="community_subitem__icon --forum-mine"></div>
+                    <h4 class="list__item-text">Minhas interações</h4>
+                </div>
+            </a>
+        
+</span>
+    </li>
+
+
+
+
+
+
+
+
+                            </ul>
+                        </li>
+
+                        
+
+                        <li class="navigation__item --mobile-only">
+                            <button class="navigation__item-name" aria-controls="profile-menu" aria-expanded="false">
+                                Configurações</button>
+                            <ul id="profile-menu" class="navigation__sublist">
+                                
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/user/gabrieldesouzaal007" class="subitem__link">
+        <div class="subitem__icon --mine"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Perfil &amp; Certificados</h4>
+            <p class="subitem__description">Gerencie seu perfil e acompanhe sua evolução</p>
+        </div>
+    </a>
+</li>
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/my_profile" class="subitem__link">
+        <div class="subitem__icon --edit"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Editar meu perfil</h4>
+        </div>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/user/payments" class="subitem__link">
+        <div class="subitem__icon --purchases"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Minha matrícula</h4>
+            <p class="subitem__description">Nota fiscal e detalhes do seu plano</p>
+        </div>
+    </a>
+</li>
+
+    
+    
+
+
+
+    <li class="navigation__subitem subitem">
+        <a href="https://cursos.alura.com.br/company-sso-client/12068/proceed" target="_blank" class="subitem__link">
+            <div class="subitem__icon --sso"></div>
+            <div class="subitem__information">
+                <h4 class="subitem__name">Acessar Alura Língua</h4>
+            </div>
+        </a>
+    </li>
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+<li class="navigation__subitem subitem">
+    <a href="https://cursos.alura.com.br/signout" class="subitem__link">
+        <div class="subitem__icon --logout"></div>
+        <div class="subitem__information">
+            <h4 class="subitem__name">Sair</h4>
+        </div>
+    </a>
+</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/menu.w.e92aff27df.js.download"></script>
+
+		
+		
+	
+	<link rel="stylesheet" href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/classPageMenu.w.3befc775fc.css">
+
+
+
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/avatarOnError.w.25025101d7.js.download"></script>
+
+
+	
+
+
+
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://stape.alura.com.br/ns.html?id=GTM-NTLWWLR"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+    
+
+
+
+
+
+<section class="task class-page-for-HQ_EXPLANATION  menu--inactive" data-allow-answer="" data-task-section-exam="false" data-task-type="hqexplanation" data-task-id="136770" data-author-id="8726814" data-course-code="java-trabalhando-lambdas-streams-spring-framework" data-section-name="Manipulando com fluxos as coleções de dados" data-section-id="17136" data-section-number="3" data-domain="cursos.alura.com.br" data-hasfeedbackanswer="false" data-url-prefix="/" data-already-seen-task="true" data-course-name="Java: trabalhando com lambdas, streams e Spring Framework" data-category-name="Programação" data-subcategory-name="Java" data-workload="14" data-teachers="Iasmin Araújo,Jacqueline Oliveira" data-is-preview="">
+
+    <section class="task-body">
+        
+
+        
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+<header class="task-body-header">
+    
+
+
+
+
+
+
+
+
+
+    
+    
+        
+    
+
+
+
+
+
+
+
+
+
+    
+        
+        <button title="Fechar menu" aria-label="Fechar menu" type="button" class="theatermode openMenu-button task-menu-button " id="menu-button-header">
+        </button>
+    
+    <div class="container">
+        <h1 class="task-body-header-title">
+            
+            
+            <svg class="task-body-header-title-svg" aria-label="Atividade de Explicação">
+                <use xlink:href="/assets/images/classPage/icon-menu-icons.svg#COMPLEMENTARY_INFORMATION"></use>
+            </svg>
+            <small>11</small>
+            <span class="task-body-header-title-text"> Para saber mais: trabalhando com datas</span>
+        </h1>
+        
+            <div class="task-body-header-actions">
+                <a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136770/next" class="task-actions-button task-actions-button-next task-submit bootcamp-primary-button-theme" style="background-color: #2A7AE4">
+                    
+                        
+                        
+                            Próxima Atividade
+                        
+                    
+                </a>
+            </div>
+        
+
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+<div class="theater-video settings">
+	<button type="button" class="settings-button" aria-label="Configurações">
+		<svg class="settings-button-icon">
+			<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#MENU_SETTINGS"></use>
+		</svg>
+	</button>
+	<div class="settings-box">
+		<ul class="settings-box-list">
+			
+				<li class="settings-box-item">
+					<button data-light-mode="Modo claro" data-dark-mode="Modo noturno" class="light-mode-action --menu-setting darkModeButton settings-box-item-darkmode">
+							Modo claro
+					</button>
+				</li>
+			
+			
+				
+				
+				
+				
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="https://cursos.alura.com.br/suggestions/new/java-trabalhando-lambdas-streams-spring-framework/136770/question">Sugerir alteração</a></li>
+					
+				
+			
+			
+		</ul>
+		<span class="settings-box-title"></span>
+	</div>
+</div>
+
+        
+    </div>
+</header>
+
+        
+
+        <div class="task-body__wrapper">
+            <main class="task-body-main container" data-should-warn="false">
+                
+
+
+
+
+
+
+
+
+	
+		
+
+
+
+
+<section class="hqExplanation" id="task-content">
+	<div class="container">
+	
+
+
+
+
+
+
+
+
+
+
+<div class="video settings">
+	<button type="button" class="settings-button" aria-label="Configurações">
+		<svg class="settings-button-icon">
+			<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#MENU_SETTINGS"></use>
+		</svg>
+	</button>
+	<div class="settings-box">
+		<ul class="settings-box-list">
+			
+				<li class="settings-box-item">
+					<button data-light-mode="Modo claro" data-dark-mode="Modo noturno" class="light-mode-action --menu-setting darkModeButton settings-box-item-darkmode">
+							Modo claro
+					</button>
+				</li>
+			
+			
+				
+				
+				
+				
+					
+						<li class="settings-box-item settings-box-item-suggestion"><a href="https://cursos.alura.com.br/suggestions/new/java-trabalhando-lambdas-streams-spring-framework/136770/question">Sugerir alteração</a></li>
+					
+				
+			
+			
+		</ul>
+		<span class="settings-box-title"></span>
+	</div>
+</div>
+
+		<div class="formattedText" data-external-links="">
+			<p>Para trabalhar com datas, podemos importar o pacote que possui diversas classes de data e hora, o <code>java.time</code>. Essa API de datas foi introduzida no <strong>Java 8</strong> com a ideia de resolver os problemas das antigas classes e <strong>facilitar o uso de datas no Java</strong>. Vamos conhecer algumas funcionalidades? </p>
+<h3>Padrões</h3>
+<p>Os formatos de data e hora são especificados por strings padrão de data e hora, a tabela a seguir mostra a sintaxe padrão que deve ser utilizada para o padrão de formatação:</p>
+<table><thead><tr><th>Letra</th><th>Componente data/hora</th><th>Exemplo</th></tr></thead><tbody><tr><td>G</td><td>Designador de era</td><td>DC</td></tr><tr><td>y</td><td>Ano</td><td>2010; 10</td></tr><tr><td>M</td><td>Mês no ano</td><td>Julho; jul; 10</td></tr><tr><td>w</td><td>Semana no ano</td><td>27</td></tr><tr><td>W</td><td>Semana no mês</td><td>2</td></tr><tr><td>D</td><td>Dia no ano</td><td>189</td></tr><tr><td>d</td><td>Dia no mês</td><td>10</td></tr><tr><td>F</td><td>Dia da semana no mês</td><td>2</td></tr><tr><td>E</td><td>Dia na semana</td><td>Terça-feira; ter</td></tr><tr><td>a</td><td>Marcador de am/pm</td><td>PM</td></tr><tr><td>H</td><td>Hora no dia (0-23)</td><td>0</td></tr><tr><td>k</td><td>Hora no dia (1-24)</td><td>24</td></tr><tr><td>K</td><td>Hora em am/pm (0-11)</td><td>0</td></tr><tr><td>h</td><td>Hora em am/pm (1-12)</td><td>12</td></tr><tr><td>m</td><td>Minuto na hora</td><td>30</td></tr><tr><td>s</td><td>Segundo no minuto</td><td>55</td></tr><tr><td>S</td><td>Fração de um segundo</td><td>978</td></tr></tbody></table>
+<p>Exemplo:</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.text.SimpleDateFormat;
+<span class="hljs-keyword">import</span> java.util.Date;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Datas</span> {
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+
+        <span class="hljs-type">String</span> <span class="hljs-variable">pattern</span> <span class="hljs-operator">=</span> <span class="hljs-string">"E, dd MMM yyyy HH:mm:ss z"</span>;
+        <span class="hljs-type">SimpleDateFormat</span> <span class="hljs-variable">simpleDateFormat</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleDateFormat</span>(pattern);
+        <span class="hljs-type">String</span> <span class="hljs-variable">date</span> <span class="hljs-operator">=</span> simpleDateFormat.format(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>());
+        System.out.println(date);
+
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Este código produzirá:</p>
+<pre class="prettyprint"><code class="language-none"> sáb., 19 nov. 2022 02:58:14 BRT”:
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<h2><code>LocalDate</code></h2>
+<p>O <code>LocalDate</code> representa uma data. Uma data sem fuso horário no sistema de calendário ISO-8601, tem como formato padrão yyyy-MM-dd. Essa classe não armazena ou representa uma hora ou fuso horário. Em vez disso, é uma descrição da data, normalmente usada para aniversários. </p>
+<h3>Data atual</h3>
+<p>Vamos utilizar o <code>LocalDate</code> para criar a data atual, a de hoje:</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.time.LocalDate;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Datas</span> {
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+
+        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalDate.now();
+        System.out.println(hoje);
+
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Perceba o resultado é a data atual no formato <strong>yyyy-MM-dd</strong> :</p>
+<pre class="prettyprint"><code class="language-none">2022-11-19
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<h3>Criando datas</h3>
+<p>Agora, vamos criar uma nova data para representar a data de um aniversário. Para isso, importaremos o pacote <strong><code>java.time.month</code></strong>;</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.time.LocalDate;
+<span class="hljs-keyword">import</span> java.time.Month;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Datas</span> {
+    
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+
+        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalDate.now();
+        System.out.println(hoje);
+
+        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">aniversarioAlice</span> <span class="hljs-operator">=</span> LocalDate.of(<span class="hljs-number">2005</span>, Month.SEPTEMBER, <span class="hljs-number">15</span>);
+        System.out.println(aniversarioAlice);
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>O resultado também será no formato yyyy-MM-dd:</p>
+<pre class="prettyprint"><code class="language-none">2005-09-15
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Também podemos brincar com esse código e calcular a idade atual da aniversariante. Uma forma de fazer isso na mão seria subtraindo o método <code>getYear</code> das datas, dessa forma:</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.time.LocalDate;
+<span class="hljs-keyword">import</span> java.time.Month;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Datas</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalDate.now();
+        System.out.println(hoje);
+
+        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">aniversarioAlice</span> <span class="hljs-operator">=</span> LocalDate.of(<span class="hljs-number">2005</span>, Month.SEPTEMBER, <span class="hljs-number">15</span>);
+        System.out.println(aniversarioAlice);
+
+        <span class="hljs-type">int</span> <span class="hljs-variable">idade</span> <span class="hljs-operator">=</span>  hoje.getYear() - aniversarioAlice.getYear();
+        System.out.println(idade);
+    }
+
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>O resultado também será:</p>
+<pre class="prettyprint"><code class="language-none">2022-11-19
+2005-09-15
+17
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<h3>Período</h3>
+<p>Ao executar esse código temos o resultado esperado, que neste caso é 17 anos. Mas e se quiséssemos descobrir a diferença de dias e meses também? Daria pra fazer da mesma forma utilizando o <strong>get</strong>, no entanto, existe algo pronto para nos ajudarmos. Nesse caso, podemos utilizar a classe <code>Period</code>.</p>
+<p>Para saber a diferença entre duas datas podemos utilizar seu método <code>between</code>, da seguinte forma:</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.time.LocalDate;
+<span class="hljs-keyword">import</span> java.time.Month;
+<span class="hljs-keyword">import</span> java.time.Period;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Datas</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalDate.now();
+        System.out.println(hoje);
+
+        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">aniversarioAlice</span> <span class="hljs-operator">=</span> LocalDate.of(<span class="hljs-number">2005</span>, Month.SEPTEMBER, <span class="hljs-number">15</span>);
+        System.out.println(aniversarioAlice);
+
+        <span class="hljs-type">int</span> <span class="hljs-variable">idade</span> <span class="hljs-operator">=</span> aniversarioAlice.getYear() - hoje.getYear();
+        System.out.println(idade);
+
+        <span class="hljs-type">Period</span> <span class="hljs-variable">periodo</span> <span class="hljs-operator">=</span> Period.between(hoje, aniversarioAlice);
+        System.out.println(periodo);
+
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Repare que a saída desse nosso <code>println</code> vai ser um pouco estranha, um exemplo seria: P-17Y-2M-4D.</p>
+<p>Isso significa um período de 17 anos, 2 meses e 4 dias.</p>
+<h2><code>LocalTime</code></h2>
+<p>O local time representa um horário, seu formato padrão é <strong>hh:mm:ss.zzz</strong>.</p>
+<h3>Horário atual</h3>
+<p>Assim como fizemos com o <code>LocalDate</code>, dessa vez vamos imprimir o horário atual:</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.time.LocalTime;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Horarios</span> {
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">LocalTime</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalTime.now();
+        System.out.println(hoje);
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Perceba o resultado é a data atual no formato <strong>hh:mm:ss.zzz</strong>:</p>
+<pre class="prettyprint"><code class="language-none">06:02:21.029460400
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<h3>Criando horários</h3>
+<p>Agora, vamos criar um novo horário para representar as horas em que Alice nasceu:</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.time.LocalTime;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Horarios</span> {
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">LocalTime</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalTime.now();
+        System.out.println(hoje);
+
+        <span class="hljs-type">LocalTime</span> <span class="hljs-variable">aniversarioHoraAlice</span> <span class="hljs-operator">=</span> LocalTime.of(<span class="hljs-number">22</span>, <span class="hljs-number">33</span>, <span class="hljs-number">15</span>);
+        System.out.println(aniversarioHoraAlice);
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>O resultado será no formato hh:mm:ss, pois colocamos dessa forma no <code>LocalTime.of()</code> :</p>
+<pre class="prettyprint"><code class="language-none">22:33:15 
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<h2><code>LocalDateTime</code></h2>
+<h3>Horário e data atual</h3>
+<p>O <code>LocalDateTime</code> representa uma data com a hora, visto como ano-mês-dia-hora-minuto-segundo. O tempo é representado como <code>yyyy-MM-dd-HH-mm-ss.zzz</code>.</p>
+<pre class="prettyprint"><code class="hljs language-java"><span class="hljs-keyword">import</span> java.time.LocalDateTime;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DataHorario</span> {
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalDateTime.now();
+        System.out.println(hoje);
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Resultado:</p>
+<pre class="prettyprint"><code class="language-none">2022-11-19T04:11:17.108565200
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<h2><code>DateTimeFormatter</code></h2>
+<p>Você deve ter notado que os resultados estão em formatos que não estamos acostumados a trabalhar. Podemos então trabalhar com diversos formatadores de datas existentes!</p>
+<p>Exemplos de formatos de data e hora:</p>
+<table><thead><tr><th>Formato</th><th>Exemplo</th></tr></thead><tbody><tr><td>MM/dd/yyyy</td><td>19/11/2022</td></tr><tr><td>dd-M-yyyy hh:mm:ss</td><td>19-11-22 12:07:23</td></tr><tr><td>dd MMMM yyyy</td><td>19 de novembro de 2022</td></tr><tr><td>dd MMMM yyyy zzzz</td><td>19 de novembro de 2022, Horário Padrão de Brasília</td></tr><tr><td>E, dd MMM yyyy HH:mm:ss z</td><td>Sáb, 19 de novembro de 2022, 12:07:23 BRT</td></tr></tbody></table>
+<p>Além disso, também podemos mudar a forma de exibir o mês. Se utilizarmos letras em quantidades diferentes, consequentemente o resultado também é. Vejamos:</p>
+<table><thead><tr><th>Tipo</th><th>Padrão</th><th>Exemplo</th></tr></thead><tbody><tr><td>Mês completo</td><td>MMMM</td><td>Setembro</td></tr><tr><td>Mês abreviado</td><td>MMM</td><td>Set.</td></tr><tr><td>Mês numérico</td><td>MM</td><td>09</td></tr></tbody></table>
+<p>Para formatarmos, vamos utilizar o <strong>DateTimeFormatter</strong>. Existem diversos já prontos, mas há ainda a alternativa de você criar o seu próprio formato no padrão já conhecido de <strong>dd/MM/yyyy hh:mm:ss</strong>.</p>
+<p>Para fazer isso basta você utilizar o método <code>ofPattern</code>. Como vimos nas tabelas anteriores, podemos escolher como será impresso.</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-type">DateTimeFormatter</span> <span class="hljs-variable">formatador</span> <span class="hljs-operator">=</span> DateTimeFormatter.ofPattern(<span class="hljs-string">"dd/MM/yyyy hh:mm:ss"</span>);
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Agora podemos a partir da nossa data, neste caso <code>hoje</code>, chamar o método <code>format</code> passando esse formatador:</p>
+<pre class="prettyprint"><code class="language-java hljs"><span class="hljs-keyword">import</span> java.time.LocalDateTime;
+<span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Formatando</span> {
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">hoje</span> <span class="hljs-operator">=</span> LocalDateTime.now();
+        System.out.println(hoje);
+
+        <span class="hljs-type">DateTimeFormatter</span> <span class="hljs-variable">formatador</span> <span class="hljs-operator">=</span> DateTimeFormatter.ofPattern(<span class="hljs-string">"dd/MM/yyyy hh:mm:ss"</span>);
+        System.out.println(hoje.format(formatador));
+
+    }
+}
+</code><button type="button" class="clipit">Copiar código</button></pre>
+<p>Agora, sim, ao executar temos o resultado:</p>
+<pre class="prettyprint"><code class="language-none">19/11/2022 04:38:11
+</code><button type="button" class="clipit">Copiar código</button></pre>
+		</div>
+	</div>
+</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+
+                
+                    
+
+
+
+
+
+
+
+	
+	
+		
+
+		<section class="task-actions">
+			<div class="container">
+				
+
+
+
+
+
+
+    
+        
+        <a href="https://cursos.alura.com.br/forum/curso-java-trabalhando-lambdas-streams-spring-framework/exercicio-para-saber-mais-trabalhando-com-datas/136770/novo" class=" task-actions-button task-actions-button-forum bootcamp-secondary-button-theme" target="_blank">
+            
+                
+                
+                    Discutir no Fórum
+                
+            
+        </a>
+    
+
+
+
+				
+				
+				
+				
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136770/next" style="background-color: #2A7AE4" class="task-actions-button task-body-actions-button task-actions-button-next bootcamp-next-button bootcamp-primary-button-theme">
+						
+							
+							
+								Próxima Atividade
+							
+						
+					</a>
+				
+			</div>
+		</section>
+	
+
+
+                
+                
+            </main>
+            
+                
+
+
+
+
+<section class="chatbot-suggestion-by-selection-section" style="display: none;">
+    <div class="chatbot-suggestion-by-selection-container chatbot-suggestion-section-active-menu">
+        <div class="chatbot-suggestion-by-selection-icon-helper">
+            <img class="chatbot-icon-selection-tooltip" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/luri-icon.svg" alt="Luri">
+            <p class="chatbot-selection-label">Ajuda da Luri ✨</p>
+        </div>
+        
+            <button class="chatbot-suggestion-by-selection-button" value="Me explique de outra forma">
+                Me explique de outra forma
+            </button>
+        
+            <button class="chatbot-suggestion-by-selection-button" value="Me dê um exemplo">
+                Me dê um exemplo
+            </button>
+        
+            <button class="chatbot-suggestion-by-selection-button" value="Me explique utilizando uma analogia">
+                Me explique utilizando uma analogia
+            </button>
+        
+    </div>
+</section>
+
+            
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside class="task-menu task-menu-iframe" style="position: fixed;">
+	<section class="task-menu-header">
+			<a class="task-menu__return-to-course" href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework" title="Ir para página do curso">
+		</a><div class="task-menu-header-info"><a class="task-menu__return-to-course" href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework" title="Ir para página do curso">
+			</a><a class="task-menu-header-info-title" href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework" title="Ir para página do curso">
+				
+					
+					
+					
+						<img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/java-trabalhando-lambdas-streams-spring-fra.svg" alt="ícone Java: trabalhando com lambdas, streams e Spring Framework" class="task-menu-header-info-title-icon " width="37.5px" height="37.5px">
+					
+				
+				<h2 class="task-menu-header-info-title-text">Java: trabalhando com lambdas, streams e Spring Framework</h2>
+			</a>
+			
+				<div class="task-menu-header-info-progress">
+					
+					<span class="task-menu-header-info-progress-percentage ">57%</span>
+					
+						
+						
+							
+						
+					
+					<span class="task-menu-header-info-progress-bar" style="background-image: linear-gradient(to right, #9de482, #9de482 57%, transparent 57%);"></span>
+				</div>
+			
+		</div>
+	</section>
+	
+		<form class="task-menu-header-search" target="_blank" action="https://cursos.alura.com.br/search/course/java-trabalhando-lambdas-streams-spring-framework" method="get">
+			<label class="task-menu-header-search-title" for="query">Buscar neste curso</label>
+			<input class="task-menu-header-search-input" name="query" id="query" type="text" required="">
+			<button class="task-menu-header-search-button">Pesquisar <img aria-hidden="true" class="task-menu-header-search-button-img" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/icon-new-page.svg"></button>
+		</form>
+	
+	
+	<section class="task-menu-section sr-only">
+		<div class="task-menu-section-title">
+			<span class="task-menu-section-title-number ">Aula<strong>03</strong>
+				<span>de 05</span>
+			</span>
+			<h3 class="task-menu-section-title-text">
+				Manipulando com fluxos as coleções de dados
+			</h3>
+		</div>
+	</section>
+	<section class="task-menu-sections">
+		<h2 class="task-menu-sections-title">
+			Aula Atual
+		</h2>
+		<select class="task-menu-sections-select" onchange="location.href=&#39;/course/java-trabalhando-lambdas-streams-spring-framework/section/&#39;+this.value+&#39;/tasks&#39;;">
+			
+				<option value="17134">01. Um novo projeto utilizando o Spring Framework</option>
+			
+				<option value="17135">02. Modelando os dados da aplicação</option>
+			
+				<option value="17136" selected="">03. Manipulando com fluxos as coleções de dados</option>
+			
+				<option value="17137">04. Explorando mais os fluxos e gerando estatísticas</option>
+			
+				<option value="17138">05. Consolidando conhecimentos</option>
+			
+		</select>
+	</section>
+	<nav class="task-menu-nav">
+		<h2 class="task-menu-nav-title">
+			
+				
+				
+					Atividades
+				
+			
+			<span>11 de 14</span>
+		</h2>
+		<ul class="task-menu-nav-list">
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136758" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#HQ_EXPLANATION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">01</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Projeto da aula anterior">
+							Projeto da aula anterior
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/135653" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">02</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Encadeando operações com streams">
+							Encadeando operações com streams
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">11min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136759" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#COMPLEMENTARY_INFORMATION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">03</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Para saber mais: operações intermediárias e finais">
+							Para saber mais: operações intermediárias e finais
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/135654" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">04</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Identificando os top 5 melhores episódios">
+							Identificando os top 5 melhores episódios
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">17min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136760" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#COMPLEMENTARY_INFORMATION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">05</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Para saber mais: uso de construtores personalizados em Java">
+							Para saber mais: uso de construtores personalizados em Java
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136761" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#COMPLEMENTARY_INFORMATION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">06</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Para saber mais: imutabilidade dos dados">
+							Para saber mais: imutabilidade dos dados
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136762" class="task-menu-nav-item-link task-menu-nav-item-link-SINGLE_CHOICE">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Única escolha concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#SINGLE_CHOICE"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">07</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Filtrando e Ordenando Episódios com Streams">
+							Filtrando e Ordenando Episódios com Streams
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/135655" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">08</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Uma nova classe para lidar com os dados do episódio">
+							Uma nova classe para lidar com os dados do episódio
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">18min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/135656" class="task-menu-nav-item-link task-menu-nav-item-link-VIDEO">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Vídeo concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#VIDEO"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">09</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Buscando episódios a partir de uma data">
+							Buscando episódios a partir de uma data
+						</span>
+						
+						<span class="task-menu-nav-item-infos">
+							
+								<span class="task-menu-nav-item-videoDuration" title="Ir para o Vídeo">12min</span>
+							
+						</span>
+					</span>
+					
+					</a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136763" class="task-menu-nav-item-link task-menu-nav-item-link-SINGLE_CHOICE">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Única escolha concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#SINGLE_CHOICE"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">10</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Filtrando e classificando dados">
+							Filtrando e classificando dados
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item task-menu-nav-item--selected">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136770" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						
+						
+					<svg class="task-menu-nav-item-svg task-menu-nav-item-svg--done" aria-label="Atividade de Explicação concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#COMPLEMENTARY_INFORMATION"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">11</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Para saber mais: trabalhando com datas">
+							Para saber mais: trabalhando com datas
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136772" class="task-menu-nav-item-link task-menu-nav-item-link-TEXT_CONTENT">
+						
+						
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Sem Resposta do Aluno não concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#DO_AFTER_ME"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">12</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Faça como eu fiz: aplicando streams e manipulando dados">
+							Faça como eu fiz: aplicando streams e manipulando dados
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/174953" class="task-menu-nav-item-link task-menu-nav-item-link-TEXT_CONTENT">
+						
+						
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Sem Resposta do Aluno não concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#CHALLENGE"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">13</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="Desafio: hora da prática">
+							Desafio: hora da prática
+						</span>
+						
+					</span></a>
+				</li>
+			
+				
+				<li class="task-menu-nav-item ">
+					<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136773" class="task-menu-nav-item-link task-menu-nav-item-link-HQ_EXPLANATION">
+						
+						
+					<svg class="task-menu-nav-item-svg " aria-label="Atividade de Explicação não concluída">
+						<use xlink:href="/assets/images/classPage/icon-menu-icons.svg#WHAT_WE_LEARNED"></use>
+					</svg>
+					<span class="task-menu-nav-item-number">14</span>
+					<span class="task-menu-nav-item-text">
+						<span class="task-menu-nav-item-title" title="O que aprendemos?">
+							O que aprendemos?
+						</span>
+						
+					</span></a>
+				</li>
+			
+			
+		</ul>
+
+		
+
+		
+			
+			
+				<section class="task-menu-others" style="padding-bottom: 3rem;">
+					
+						
+						<a href="https://cursos.alura.com.br/forum/curso-java-trabalhando-lambdas-streams-spring-framework/todos" class="task-menu-others-link task-menu-others-link-forum" title="Ir para o fórum do curso" target="_blank">
+							
+								
+								
+									Fórum do curso
+								
+							
+						</a>
+					
+				</section>
+			
+		
+	</nav>
+
+</aside>
+
+
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside id="chatbot" class="chatbot-resizable animate" style="z-index: 200">
+    <div class="chatbot-cta ">
+        <div class="chatbot-tooltip">E aí, precisa de ajuda?</div>
+        <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/luri-icon-cta.svg" class="chatbot-cta-image" aria-label="Abrir chat com a Luri" tabindex="0" role="button">
+    </div>
+
+    <div class="chatbot-header">
+        
+        
+            <div class="chatbot-header__icon">
+                <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/luri-icon.svg" alt="Ícone da Luri">
+            </div>
+            <div class="chatbot-header__about">
+                <div class="chatbot-header__about_row">
+                    <div class="chatbot-header__about-name">Luri</div>
+                </div>
+            </div>
+        
+        <div class="chatbot-header_buttons_wrapper">
+            <button class="chatbot-header__expand-collapse_button">
+                <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/vector-expand.svg" alt="Expadir">
+            </button>
+            <button class="chatbot-header__close" aria-label="Fechar chat da Luri">
+                <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/close.svg" alt="Fechar">
+            </button>
+        </div>
+
+    </div>
+
+    <div class="suggestion-main-container">
+        <div class="suggestion-luri-presentation">
+            <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/luri-icon.svg" alt="Ícone da Luri">
+            <p>Oi, eu sou Luri :) Estou aqui para te ajudar caso tenha alguma dúvida no conteúdo da aula.</p>
+        </div>
+        <div class="chatbot-footer__questions">
+            
+                <button class="chatbot-footer__questions-item">Faça um resumo dessa aula</button>
+            
+                <button class="chatbot-footer__questions-item">Como posso analisar se apliquei os conceitos da aula corretamente?</button>
+            
+                <button class="chatbot-footer__questions-item">Explique a aula usando analogias</button>
+            
+        </div>
+    </div>
+
+    <div class="chatbot-body style-scroll"></div>
+    <div class="spotlight-large"></div>
+
+    <div class="chatbot-footer">
+        <div class="chatbot-footer__actions">
+            <button class="chatbot-footer__actions-btn chatbot-footer__actions-clean-conversation">Limpar conversa</button>
+        </div>
+        <form>
+            
+                
+                    <div class="chatbot-footer__send-area">
+                        <input multiple="" type="file" accept="image/png, image/gif, image/jpeg" class="hidden" id="imageUpload" style="display: none">
+                        <div class="chatbot-footer__send-area-input">
+                            <div class="images--preview"></div>
+                            <div class="chatbot-footer__send-area-input-area">
+                                <button type="button" class="chatbot-footer__attachment-btn">
+                                    <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/attachment-icon.svg" alt="Ícone de clipe de papel, representando a opção de anexar um arquivo.">
+                                </button>
+                                <textarea id="textArea" class="chatbot-footer__send-area-content style-scroll" rows="1" placeholder="Escreva sua mensagem..."></textarea>
+                            </div>
+                        </div>
+                        <button class="chatbot-footer__send-area-btn">
+                            <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/icon-send.svg" alt="Enviar">
+                        </button>
+                    </div>
+                
+                
+            
+
+        </form>
+        <div class="chatbot-footer__messages">
+            <div class="chatbot-footer__feedback">
+                <a href="https://suporte.alura.com.br/conhe%C3%A7a-a-luri-nossa-intelig%C3%AAncia-artificial" target="_blank">FAQ</a>
+                <img src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ellipse.png">
+                <a href="https://tally.so/r/waeWvB" target="_blank">Enviar feedback</a>
+            </div>
+            <a href="https://cursos.alura.com.br/chatbot/conversations?courseCode=java-trabalhando-lambdas-streams-spring-framework">
+                Histórico de conversas
+            </a>
+        </div>
+
+    </div>
+
+    <div class="chatbot-resizer"></div>
+</aside>
+    
+
+</section><div class="full-screen__panel" style="display: none;">
+				<img id="full-screen__image" class="full-screen__image" src="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136770" alt="">
+				<div class="full-screen__actions">
+				<button class="button buttonAction partitura-download">Anterior</button><button class="button buttonAction partitura-download">Sair</button><button class="button buttonAction partitura-download">Próximo</button></div> 
+			</div>
+
+
+
+
+    
+
+
+<div id="checkpointAlertModal" class="checkpoint_modal__wrapper">
+    <div class="modal__body" role="dialog">
+        <span class="modal--close modal-close"></span>
+        <div class="modal--text">
+            <h1 class="modal--title">Você já tem um projeto em andamento</h1>
+            <div class="modal--text-info">
+                <p>Se você abrir o projeto atualizado, seu progresso anterior será substituído</p><p>O que deseja fazer?</p>
+            </div>
+        </div>
+        <div class="modal--buttons__wrapper">
+            <button id="confirmButton" class="modal--button modal--button__confirm">Substituir meu progresso pelo projeto atualizado</button>
+            <button class="modal--button modal--button__cancel modal-close">Continuar com meu projeto</button>
+        </div>
+    </div>
+</div>
+<a href="https://cursos.alura.com.br/course/java-trabalhando-lambdas-streams-spring-framework/task/136770#" id="openScratchProjectLink" class="hidden fake-link" target="_blank"></a>
+
+
+    
+
+
+<div id="projectTeamsModal" class="select-team-modal__wrapper">
+    <div class="select-team-modal__body" role="dialog">
+        <span class="scratch_team_select_modal__close"></span>
+        <div class="modal--select__wrapper">
+            <div class="modal--text">
+                <p class="select-team-modal__body--title speech-ignore">Para qual turma você quer abrir o projeto? </p>
+            </div>
+            <select id="selectTeams">
+                <option value="">
+                    Meu projeto
+                </option>
+            </select>
+        </div>
+        <div class="modal--buttons__wrapper">
+            <button class="select-team-modal__cancel_button">
+                Cancelar
+            </button>
+            <button class="select-team-modal__open_button">
+                Abrir Projeto
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+	
+	<!-- Hotjar Tracking Code for https://cursos.alura.com.br -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:1638253,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+	
+
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/jquery-3.6.0.min.w.7c14a783df.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/buttonToggle.w.41524be9a8.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/sectionMenu.w.b17e969593.js.download" async=""></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/submitTaskVerifier.w.fc5728f180.js.download"></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/purify.min.w.549c43ecd1.js.download"></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/caret.w.2e5c0c9d44.js.download" async=""></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/keydownWatchers.w.f6b3bb8509.js.download" async=""></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/highlight.min.w.9b99da81ed.js.download" async=""></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/highlight.init.w.5870d8cf46.js.download" async=""></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/preventsMultipleInteractions.w.19502e1.download" async=""></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/assessment.w.98e894ccb6.js.download" async=""></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/news.w.ace9a4daff.js.download" async=""></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/populateGrid.w.32d140c07b.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/makeHeaderPoints.w.d22d76f099.js.download" async=""></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/submitChatbotSearch.w.01a619f9aa.js.download" async=""></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/menuSettings.w.fb011b3b3c.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/aria.w.f116e8f245.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ProjectSubmit.w.e53b914a0c.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/LinkSubmit.w.045e32ffa5.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/classPage.w.7990e68497.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/courseIconFallback.w.ffebca48b0.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/buttonDarkMode.w.7aeb16b271.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/phrase.w.28ab673bae.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/feedback.w.dc0e6d4869.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ExtraContentProgressRequest.w.d0c0e896.download"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/partitura.w.45bea2abae.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/audioProgress.w.0ec13dcffe.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/audioPlayer.w.70b88a31a1.js.download"></script>
+
+
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/VideoTranscription.w.712fab2b61.js.download"></script>
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/MarkdownProcessing.w.5401cc9538.js.download"></script>
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/clipboard.min.w.af8ab36589.js.download"></script>
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/Clipper.w.3605790d00.js.download"></script>
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/scroll-to-top.w.d8b451258a.js.download"></script>
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/shortcuts-action.w.8e58fbda55.js.download"></script>
+    <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ModalAndAlertHandler.w.26bbc406ea.js.download"></script>
+    
+    
+    
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/interactjs.w.afa745688f.js.download"></script>
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/chatbotInteractAnimate.w.bb950321df.js.download"></script>
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ChatbotUtils.w.641de100c4.js.download"></script>
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ChatbotTask.w.52bde0017d.js.download"></script>
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ChatbotSuggestionByTextSelection.w.a24.download"></script>
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ChatbotFullscreenHandler.w.15efa06839..download"></script>
+        <script>
+            const gnarusUserContentConfig = {
+                endpoint: 'https://www.gnarususercontent.com.br/images',
+                token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTY0NDM0MzQsImtleSI6IjdiMjcwMTliLWRlNDgtNGQyZi1iOTYyLTFkOWYyMzcyZjliNyJ9.ZBnDO5eAPNeO8zVrIZiYM0RiHiFkaQMkGR3jHKyltD0',
+                envieId: '1',
+                userId: '8726814',
+            };
+
+            new ChatbotTask({
+                codeAreaDefaultCopyMessage: "Copiar código",
+                codeAreaCopiedMessage: "Copiado!",
+                firstAssistantMessage: "Oi, eu sou Luri :) Estou aqui para te ajudar caso tenha alguma dúvida no conteúdo da aula.",
+                couldNotReplyMessage: "Oi, estudante! Estamos passando por um problema temporário e a Luri não está funcionando no momento. Estamos trabalhando para retornar o mais rápido possível!",
+                upvoteIconAltMessage: "Ícone do polegar para cima, indicando que a resposta te ajudou",
+                downvoteIconAltMessage: "Ícone do polegar para baixo, indicando que a resposta não te ajudou",
+                copyIconAltMessage: "Copiar texto da Luri para área de transferêcia",
+                upvoteIconTooltipMessage: "Resposta boa",
+                downvoteIconTooltipMessage: "Resposta ruim",
+                copyIconTooltipMessage: "Copiar",
+                downvoteLabelMessage: "",
+                wrongAnswerTitle: "Gostaria de revisar o conteúdo do exercício?",
+                suggestAnalogyTitle: "<p>Olá! 👋</p><p>Gostaria de uma analogia sobre a aula para facilitar o entendimento?</p>",
+                wrongAnswerButton: "Sim, me ajude a revisar",
+                wrongAnswerPrompt: "Luri, me explique o enunciado deste exercício",
+                suggestAnalogyButton: "Sim, me explique usando analogias",
+                suggestAnalogyPrompt: "Luri, me explique a aula usando analogias de maneira detalhada",
+                closeButton: "Fechar",
+                removeImageIconAltText: "Ícone de X azul em um círculo para remover a imagem"
+            }, gnarusUserContentConfig, "true", null, 8726814).setupListeners();
+        </script>
+        <script>
+            new ChatbotSuggestionByTextSelection();
+            new ChatbotFullscreenHandler();
+        </script>
+    
+
+    
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ModalScratchCheckpoint.w.a7de824f28.js.download"></script>
+        <script>
+            const scratchCheckpointLinks = document.querySelectorAll('.linkcheckpoint');
+            if (scratchCheckpointLinks.length > 0) {
+                new ModalScratchCheckpoint(scratchCheckpointLinks, 'java-trabalhando-lambdas-streams-spring-framework');
+            }
+        </script>
+    
+
+    
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ModalScratchSelectTeam.w.48193781a7.js.download"></script>
+        <script>
+            new ModalScratchSelectTeam();
+        </script>
+    
+
+    
+
+
+    <script>
+        new VideoTranscription();
+        new MarkdownProcessing("https://cursos.alura.com.br").onLoad();
+        new Clipper("Copiar código", "Código copiado!", "Falha ao copiar o código!");
+        window.addEventListener('load', () => new BackToTopButton().init());
+        new ModalAndAlertHandler('java-trabalhando-lambdas-streams-spring-framework').setupListeners();
+
+        const submitExamMessage = `Enviar avaliação`;
+    </script>
+
+
+
+
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/darkMode.w.8ba5e2f170.js.download"></script>
+
+<script>new DarkModeToggler().refreshListener()</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/uploadImages.w.9ff7d1f962.css" rel="stylesheet">
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/UploadProgress.w.9715e5849f.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/ImagesClient.w.c494a2317e.js.download"></script>
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/CourseDocumentsApiClient.w.d8e3dc473c..download"></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/marked.min.w.c69e14e81a.js.download"></script>
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/enableForumButtons.w.b6a18ff52b.js.download"></script>
+
+<script>
+    var IMAGE_UPLOAD_MESSAGES = {
+        imageUploadMessageInit: `Anexe arquivos arrastando e soltando`,
+        imageUploadMessageDragEnter: `Solte a imagem para fazer o upload`,
+        imageUploadMessageDrop: `Enviando a imagem #images_names#`,
+        imageUploadMessageProgress: `Enviando o arquivo #images_names#: #progress#%`,
+        imageUploadMessageUploaded: `Arquivo enviado com sucesso!`,
+        imageUploadMessageSizeUnits: `MB`,
+        imageUploadMessageTag: `![Insira aqui a descrição dessa imagem para ajudar na acessibilidade](#url#) `
+    }
+</script>
+
+
+    
+        <link href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/hackeditor.min.w.fcf421a7b6.css" rel="stylesheet">
+        <link href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/hackeditor.custom.w.d571c4a9eb.css" rel="stylesheet">
+        <link href="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/github.w.7eada5b91a.css" rel="stylesheet">
+
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/hackeditor.min.w.fdc227ab0b.js.download"></script>
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/hackeditor.custom.w.21120a8333.js.download"></script>
+        <script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/highlight.min.w.9b99da81ed.js.download"></script>
+        <script>
+            const setupEditorsOnPage = (e) => {
+                const toolbarActionsHints = {
+                    toggleHeadingActionHint: `Título`,
+                    toggleBoldActionHint: `Negrito`,
+                    toggleItalicActionHint: `Itálico`,
+                    toggleOrderedListActionHint: `Lista ordenada`,
+                    toggleUnorderedListActionHint: `Lista não ordenada`,
+                    togglePreviewActionHint: `Pré-visualizar`,
+                    drawTableActionHint: `Inserir Tabela`,
+                    drawCodeActionHint: `Inserir bloco de código`,
+                    drawLinkActionHint: `Inserir Link`,
+                    drawImageActionHint: `Inserir Imagem`,
+                    drawUploadedImageActionHint: `Upload de imagem`,
+                    drawUploadedDocActionHint: `Upload de documento`,
+                    undoActionHint: `Desfazer`,
+                    redoActionHint: `Refazer`
+                }
+
+                const imageUploadErrors = {
+                    imageErrorLimit: `Você só pode inserir 5 imagens por vez!`,
+                    imageFileNotAllowed: `O arquivo filename não é permitido, apenas imagens!`,
+                    imageVeryLarge: `O arquivo filename é maior que o limite de 2 MB.`,
+                    imageMaliciousFile: `O arquivo filename contém conteúdo malicioso.`
+                }
+
+                const docUploadErrors = {
+                    docErrorLimit: `Você só pode inserir 5 documentos por vez!`,
+                    docFileNotAllowed: `O arquivo filename não é permitido!`,
+                    docVeryLarge: `O arquivo filename é maior que o limite de 5 MB.`,
+                    docMaliciousFile: `O arquivo filename contém conteúdo malicioso.`
+                }
+
+                window.editors = window.editors || [];
+
+                const editorsElements = window.editors.map(ed => ed.element.id);
+
+                const textAreaEditors = Array.from(document.querySelectorAll('.hackeditor > textarea'));
+                textAreaEditors
+                    .filter(e => e.closest('.taskForms') == null)
+                    .filter(e => editorsElements.length == 0 ? true : !editorsElements.includes(e.id))
+                    .forEach(editorTextArea => {
+                        const editor = setupHackEditor({
+                            editorOptions: {
+                                element: editorTextArea,
+                                initialValue: editorTextArea.value || editorTextArea.innerText,
+                                syncPreview: true,
+                                maxHeight: "300px",
+                                toolbarActionsHints,
+                                // Image options
+                                imageUploadMessages: IMAGE_UPLOAD_MESSAGES,
+                                imageUploadErrors,
+                                imageUploadClient: new ImagesClient(
+                                    'https://www.gnarususercontent.com.br/images',
+                                    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTY0NDM0MzQsImtleSI6IjdiMjcwMTliLWRlNDgtNGQyZi1iOTYyLTFkOWYyMzcyZjliNyJ9.ZBnDO5eAPNeO8zVrIZiYM0RiHiFkaQMkGR3jHKyltD0',
+                                    1,
+                                    8726814
+                                ),
+                                allowImageUpload: editorTextArea.dataset.allowImageUpload,
+                                // Document options
+                                docUploadErrors,
+                                docUploadClient: new CourseDocumentsApiClient(
+                                    'https://www.gnarususercontent.com.br/documents',
+                                    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTY0NDM0MzQsImtleSI6IjdiMjcwMTliLWRlNDgtNGQyZi1iOTYyLTFkOWYyMzcyZjliNyJ9.ZBnDO5eAPNeO8zVrIZiYM0RiHiFkaQMkGR3jHKyltD0',
+                                    1,
+                                    8726814
+                                ),
+                                allowDocUpload: editorTextArea.dataset.allowDocUpload
+                            },
+                            extensions: {
+                                DOMPurify,
+                                marked,
+                                hljs
+                            }
+                        });
+
+                        window.editors.push({
+                            instance: editor,
+                            element: editorTextArea,
+                        });
+
+                        enableForumButtons();
+                });
+            }
+
+            window.addEventListener('DOMContentLoaded', setupEditorsOnPage);
+            document.addEventListener('change', setupEditorsOnPage);
+            window.setupEditorsOnPage = setupEditorsOnPage;
+        </script>
+    
+    
+
+
+<script src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/IframeChecker.w.0a974f5824.js.download"></script><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/saved_resource.html"></iframe>
+
+
+<script type="text/javascript" id="" charset="">(function(a,b,c,d){a[c]=a[c]||[];a[c].push({eventType:"init",value:d,dc:"us"});a=b.getElementsByTagName("script")[0];b=b.createElement("script");b.async=!0;b.src="https://tags.creativecdn.com/OiIKV8DdRsC6DWlZuu25.js";a.parentNode.insertBefore(b,a)})(window,document,"rtbhEvents","OiIKV8DdRsC6DWlZuu25");</script><iframe id="_hjSafeContext_35135093" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./Java_ trabalhando com lambdas, streams e Spring Framework_ Aula 3 - Atividade 11 Para saber mais_ trabalhando com datas _ Alura - Cursos online de tecnologia_files/saved_resource(1).html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><button class="back-to-top" type="button" style="display: none;"><span class="back-to-top__text">Voltar ao topo</span></button></body></html>

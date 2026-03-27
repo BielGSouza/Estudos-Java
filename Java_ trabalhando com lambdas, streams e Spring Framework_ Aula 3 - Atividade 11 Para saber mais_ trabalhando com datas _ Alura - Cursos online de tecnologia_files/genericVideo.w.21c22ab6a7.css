@@ -1,0 +1,1 @@
+#loading{position:relative}.loading-spinning{animation:spin 3s linear infinite;left:calc(50% - 15px);position:absolute;top:70%;width:30px}@keyframes spin{0%{transform:scale(1) rotate(0deg)}to{transform:scale(1) rotate(1turn)}}.video-js{border:0;height:477px;width:100%}@media print{.video-container{display:none}}

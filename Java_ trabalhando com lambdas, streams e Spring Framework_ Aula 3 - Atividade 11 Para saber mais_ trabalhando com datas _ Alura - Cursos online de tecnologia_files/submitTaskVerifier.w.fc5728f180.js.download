@@ -1,0 +1,1 @@
+"use strict";$(".task-actions-button-complete-verifier").on("click",function(t){var e=$(this).data("message");!e||confirm(e)||t.preventDefault()});
